@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Completa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculadora">
+        <div class="display">
+            <div class="display-historico" id="historico-display"></div>
+            <div class="display-atual" id="display">0</div>
+        </div>
+        
+        <div class="botoes">
+            <!-- Primeira linha -->
+            <button class="btn btn-clear" onclick="limparTudo()">AC</button>
+            <button class="btn btn-clear" onclick="limparEntrada()">C</button>
+            <button class="btn btn-funcao" onclick="operacao('±')">±</button>
+            <button class="btn btn-operador" onclick="operacao('÷')">÷</button>
+            
+            <!-- Segunda linha -->
+            <button class="btn btn-numero" onclick="adicionarNumero('7')">7</button>
+            <button class="btn btn-numero" onclick="adicionarNumero('8')">8</button>
+            <button class="btn btn-numero" onclick="adicionarNumero('9')">9</button>
+            <button class="btn btn-operador" onclick="operacao('×')">×</button>
+            
+            <!-- Terceira linha -->
+            <button class="btn btn-numero" onclick="adicionarNumero('4')">4</button>
+            <button class="btn btn-numero" onclick="adicionarNumero('5')">5</button>
+            <button class="btn btn-numero" onclick="adicionarNumero('6')">6</button>
+            <button class="btn btn-operador" onclick="operacao('-')">-</button>
+            
+            <!-- Quarta linha -->
+            <button class="btn btn-numero" onclick="adicionarNumero('1')">1</button>
+            <button class="btn btn-numero" onclick="adicionarNumero('2')">2</button>
+            <button class="btn btn-numero" onclick="adicionarNumero('3')">3</button>
+            <button class="btn btn-operador" onclick="operacao('+')">+</button>
+            
+            <!-- Quinta linha -->
+            <button class="btn btn-numero btn-zero" onclick="adicionarNumero('0')">0</button>
+            <button class="btn btn-numero" onclick="adicionarVirgula()">,</button>
+            <button class="btn btn-igual" onclick="calcular()">=</button>
+            
+            <!-- Sexta linha - Funções avançadas -->
+            <button class="btn btn-funcao" onclick="operacao('√')">√</button>
+            <button class="btn btn-funcao" onclick="operacao('x²')">x²</button>
+            <button class="btn btn-funcao" onclick="operacao('%')">%</button>
+            <button class="btn btn-funcao" onclick="operacao('1/x')">1/x</button>
+        </div>
+
+        <div class="historico">
+            <h4>Histórico</h4>
+            <div id="lista-historico"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
